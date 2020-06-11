@@ -40,7 +40,7 @@
 
   <style>
     .dados-aberto-filter {
-      background-color: #34495e; 
+      background-color: #337ab7; 
       padding: 10px;
     }
 
@@ -66,20 +66,11 @@
     display: block;
     padding: 0;
     margin: 0;
-    border: 1px solid;
-    border-radius: 5px;
     width: auto;
-    border-color: #080808;
   }
   #dados-aberto-menu,
   #dados-aberto-menu > ul > li > ul > li a:hover {
-    background: #3c3c3c;
-    background: -moz-linear-gradient(top, #3c3c3c 0%, #222222 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3c3c3c), color-stop(100%, #222222));
-    background: -webkit-linear-gradient(top, #3c3c3c 0%, #222222 100%);
-    background: -o-linear-gradient(top, #3c3c3c 0%, #222222 100%);
-    background: -ms-linear-gradient(top, #3c3c3c 0%, #222222 100%);
-    background: linear-gradient(top, #3c3c3c 0%, #222222 100%);
+    background: #337ab7;
   }
   #dados-aberto-menu > ul {
     list-style: inside none;
@@ -105,8 +96,8 @@
     font-weight: bold;
     font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
-    border-right: 1px solid #080808;
     color: #ffffff;  
+    text-transform: uppercase;
   }
   #dados-aberto-menu > ul > li > a:hover {
     background: #080808;
@@ -118,12 +109,10 @@
   #dados-aberto-menu > ul > li > a:after {
     content: '';
     position: absolute;
-    border-right: 1px solid;
     top: -1px;
     bottom: -1px;
     right: -2px;
-    z-index: 99;
-    border-color: #3c3c3c;  
+    z-index: 99; 
   }
   #dados-aberto-menu ul li.has-sub:hover > a:after {
 	top: 0;
@@ -186,7 +175,8 @@
 	font: 10pt Arial, Helvetica, sans-serif;
 	color: #ffffff;
 	text-decoration: none;
-	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
 }
 #dados-aberto-menu ul ul a:hover {
 	color: #ffffff;
