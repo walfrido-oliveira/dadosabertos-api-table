@@ -24,4 +24,6 @@ node_modules/
 
 *.*
 *
-!template-dados-aberto-table.php
+!template-dados-aberto.php
+!tempate-dados-aberto.css
+!functions-template-dados-abertos.php
