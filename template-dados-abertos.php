@@ -1,4 +1,6 @@
 <?php
+defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+
   /**
    * Template Name: Dados Abertos
    * Template Post Type: page
@@ -92,11 +94,23 @@
           </form>
       </div>
       <div class="row">
-        <table class="table" id="dados-abertos-table">
+        <table class="table table-bordered" id="dados-abertos-table">
         <thead>
           <tr>
             <?php foreach ($report[ $reportType ][ 'columns' ] as $value) : ?> 
               <th><?php echo $value; ?></th>
+            <?php endforeach; ?>
+          </tr>
+          <tr>
+            <?php foreach ($report[ $reportType ][ 'columns' ] as $value) : ?> 
+              <th>
+                <div class="input-group">
+                  <input onkeyup="filterTable()" class="form-control" type="text" name="<?php echo sanitize_title( $value ); ?>">
+                  <span class="input-group-addon">
+                    <i class="fa fa-filter"  aria-hidden='true'></i>
+                  </span>
+                </div>
+              </th>
             <?php endforeach; ?>
           </tr>
         </thead>
@@ -108,17 +122,9 @@
               <?php endforeach; ?>
             </tr>
           <?php endforeach; ?>
-        </tbody>
-        </table>
-      </div>
-    </div>
-
-  </main><!-- #site-content -->
-
-  <?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
-
-  <?php get_footer(); ?>
-
+          <?php if ( count( $result ) == 0 ) : ?>
+            <tr class="empty-row"><td colspan="8" class="text-center">A pesquisa não retornou  nenhum resultado</td></tr>
+          <?php endif; ?>
         </tbody>
         </table>
       </div>
