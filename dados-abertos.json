@@ -20,7 +20,11 @@
       "situacao",
       "valor_homologado"
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_dispensas_inexigibilidades"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_dispensas_inexigibilidades",
+    "filter": {
+      "year": true,
+      "month": true
+    }
   },
   "licitacoes": {
     "columns": [
@@ -41,7 +45,11 @@
       "situacao",
       "valor_homologado"
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_licitacoes"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_licitacoes",
+    "filter": {
+      "year": true,
+      "month": true
+    }
   },
   "contratos-e-aditivos": {
     "columns": [
@@ -62,7 +70,11 @@
       "situacao",
       "valor"
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_contratos"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_contratos",
+    "filter": {
+      "year": true,
+      "month": false
+    }
   },
   "termos-de-compromisso-atas": {
     "columns": [
@@ -86,7 +98,11 @@
       "objeto",
       "valor"
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_atas"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_atas",
+    "filter": {
+      "year": true,
+      "month": false
+    }
   },
   "ordem-de-compras": {
     "columns": [
@@ -105,7 +121,11 @@
       "nome_favorecido",
       "valor"
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_ordemcompras"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_ordemcompras",
+    "filter": {
+      "year": true,
+      "month": true
+    }
   },
   "entrada-de-estoque": {
     "columns": [
@@ -126,7 +146,11 @@
       "",
       ""
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_materiais_entradas"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_materiais_entradas",
+    "filter": {
+      "year": false,
+      "month": false
+    }
   },
   "saída-de-estoque": {
     "columns": [
@@ -143,7 +167,11 @@
       "",
       ""
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_materiais_saidas"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_materiais_saidas",
+    "filter": {
+      "year": false,
+      "month": false
+    }
   },
   "bens-consolidados": {
     "columns": [
@@ -166,7 +194,11 @@
       "",
       ""
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_bens_consolidado"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_bens_consolidado",
+    "filter": {
+      "year": false,
+      "month": false
+    }
   },
   "bens-moveis": {
     "columns": [
@@ -191,7 +223,11 @@
       "",
       ""
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_bens_moveis"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_bens_moveis",
+    "filter": {
+      "year": false,
+      "month": false
+    }
   },
   "bens-imoveis": {
     "columns": [
@@ -210,7 +246,11 @@
       "",
       ""
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_bens_imoveis"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_bens_imoveis",
+    "filter": {
+      "year": false,
+      "month": false
+    }
   },
   "frota": {
     "columns": [
@@ -235,7 +275,11 @@
       "situacao",
       "localizacao"
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_frota_veiculos"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_frota_veiculos",
+    "filter": {
+      "year": false,
+      "month": false
+    }
   },
   "orcamento-das-receitas": {
     "columns": [
@@ -258,7 +302,11 @@
       "fonte_recurso",
       "valor"
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_orcamento_receitas"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_orcamento_receitas",
+    "filter": {
+      "year": true,
+      "month": true
+    }
   },
   "receita-realizada": {
     "columns": [
@@ -285,7 +333,11 @@
       "valor_previsto",
       "valor_realizado"
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_execucao_receitas"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_execucao_receitas",
+    "filter": {
+      "year": true,
+      "month": true
+    }
   },
   "orcamento-das-despesas": {
     "columns": [
@@ -308,7 +360,11 @@
       "elemento_despesa",
       "valor"
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_orcamento_despesas"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_orcamento_despesas",
+    "filter": {
+      "year": true,
+      "month": false
+    }
   },
   "empenhos-e-favorecidos": {
     "columns": [
@@ -329,7 +385,11 @@
       "documento_favorecido",
       "valor"
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_empenhos"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_empenhos",
+    "filter": {
+      "year": true,
+      "month": true
+    }
   },
   "liquidacoes-e-favorecidos": {
     "columns": [
@@ -350,7 +410,11 @@
       "documento_favorecido",
       "valor"
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_liquidacoes"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_liquidacoes",
+    "filter": {
+      "year": true,
+      "month": true
+    }
   },
   "pagamentos-e-favorecidos": {
     "columns": [
@@ -371,7 +435,11 @@
       "documento_favorecido",
       "valor"
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_pagamentos"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_pagamentos",
+    "filter": {
+      "year": true,
+      "month": true
+    }
   },
   "despesas-com-diarias": {
     "columns": [
@@ -392,7 +460,11 @@
       "documento_favorecido",
       "valor"
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_diarias"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_diarias",
+    "filter": {
+      "year": true,
+      "month": true
+    }
   },
   "despesas-com-passagens": {
     "columns": [
@@ -413,7 +485,11 @@
       "",
       ""
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_passagens"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_passagens",
+    "filter": {
+      "year": false,
+      "month": false
+    }
   },
   "despesas-com-obras": {
     "columns": [
@@ -434,7 +510,11 @@
       "documento_favorecido",
       "valor"
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_obras"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_obras",
+    "filter": {
+      "year": true,
+      "month": true
+    }
   },
   "tranferencias-cedidas": {
     "columns": [
@@ -456,7 +536,11 @@
       "",
       ""
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_convenios_firmados"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_convenios_firmados",
+    "filter": {
+      "year": false,
+      "month": false
+    }
   },
   "transferencias-recebidas": {
     "columns": [
@@ -478,7 +562,11 @@
       "",
       ""
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_convenios_firmados"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_convenios_firmados",
+    "filter": {
+      "year": false,
+      "month": false
+    }
   },
   "transferencias-extraorcamentarias": {
     "columns": [
@@ -505,7 +593,11 @@
       "valor_receita",
       "valor_despesa"
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_transf_extraorcamentarias"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_transf_extraorcamentarias",
+    "filter": {
+      "year": true,
+      "month": true
+    }
   },
   "transferencias-intraorcamentarias": {
     "columns": [
@@ -532,7 +624,11 @@
       "valor_receita",
       "valor_despesa"
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_transf_intraorcamentarias"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_transf_intraorcamentarias",
+    "filter": {
+      "year": true,
+      "month": true
+    }
   },
   "servidores": {
     "columns": [
@@ -555,7 +651,11 @@
       "data_demissao",
       "situacao"
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_servidores"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_servidores",
+    "filter": {
+      "year": true,
+      "month": true
+    }
   },
   "plano-de-cargos-e-salarios": {
     "columns": [
@@ -576,7 +676,11 @@
       "",
       ""
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_plano_carreiras"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_plano_carreiras",
+    "filter": {
+      "year": false,
+      "month": false
+    }
   },
   "cargos-e-vagas": {
     "columns": [
@@ -589,7 +693,11 @@
       "",
       ""
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_vagas_cargos"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_vagas_cargos",
+    "filter": {
+      "year": false,
+      "month": false
+    }
   },
   "atos-dos-cargos": {
     "columns": [
@@ -614,7 +722,11 @@
       "",
       ""
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_atos_cargos"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_atos_cargos",
+    "filter": {
+      "year": false,
+      "month": false
+    }
   },
   "cargos-comissionados": {
     "columns": [
@@ -635,6 +747,10 @@
       "",
       ""
     ],
-    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_cargos_confianca"
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_cargos_confianca",
+    "filter": {
+      "year": false,
+      "month": false
+    }
   }
 }
