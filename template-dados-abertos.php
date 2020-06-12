@@ -20,7 +20,7 @@
     "12" => "Dezembro",
   ); 
 
-  $report = file_get_contents( dirname(__FILE__) . '/dados-aberto.json' );
+  $report = file_get_contents( dirname(__FILE__) . '/dados-abertos.json' );
   $report = json_decode( $report, true );
 
   $reportType = get_field_object( 'report_type', get_the_ID() )[ 'value' ];

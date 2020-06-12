@@ -1,0 +1,640 @@
+{
+  "dispensas-e-inexibilidade": {
+    "columns": [
+      "Número",
+      "Modalidade",
+      "Processo",
+      "Abertura",
+      "Objeto",
+      "Base Legal",
+      "Situação",
+      "Valor"
+    ],
+    "fields": [
+      "numero",
+      "modalidade",
+      "processo",
+      "abertura",
+      "objeto",
+      "base_legal",
+      "situacao",
+      "valor_homologado"
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_dispensas_inexigibilidades"
+  },
+  "licitacoes": {
+    "columns": [
+      "Número",
+      "Modalidade",
+      "Processo",
+      "Abertura",
+      "Objeto",
+      "Situação",
+      "Valor"
+    ],
+    "fields": [
+      "numero",
+      "modalidade",
+      "processo",
+      "abertura",
+      "objeto",
+      "situacao",
+      "valor_homologado"
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_licitacoes"
+  },
+  "contratos-e-aditivos": {
+    "columns": [
+      "Contrato",
+      "Processo",
+      "Objeto",
+      "Favorecido",
+      "Documento",
+      "Situação",
+      "Valor"
+    ],
+    "fields": [
+      "contrato",
+      "processo",
+      "objeto",
+      "nome_favorecido",
+      "documento_favorecido",
+      "situacao",
+      "valor"
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_contratos"
+  },
+  "termos-de-compromisso-atas": {
+    "columns": [
+      "Contrato",
+      "Processo",
+      "Assinatura",
+      "Categoria",
+      "CPF/CNPJ",
+      "Favorecido",
+      "Objeto",
+      "Situação",
+      "Valor"
+    ],
+    "fields": [
+      "contrato",
+      "processo",
+      "assinatura",
+      "categoria",
+      "documento_favorecido",
+      "nome_favorecido",
+      "objeto",
+      "valor"
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_atas"
+  },
+  "ordem-de-compras": {
+    "columns": [
+      "Número",
+      "Secretaria/Órgão",
+      "Aquisição",
+      "Documento",
+      "Fornecedor",
+      "Valor"
+    ],
+    "fields": [
+      "numero",
+      "unidade_gestora",
+      "data_ordem",
+      "documento_favorecido",
+      "nome_favorecido",
+      "valor"
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_ordemcompras"
+  },
+  "entrada-de-estoque": {
+    "columns": [
+      "Almoxarifado",
+      "Entrada",
+      "Nota Fiscal",
+      "Emissão",
+      "Fornecedor",
+      "Documento",
+      "Valor"
+    ],
+    "fields": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_materiais_entradas"
+  },
+  "saída-de-estoque": {
+    "columns": [
+      "Almoxarifado",
+      "Saída",
+      "Requisição",
+      "Requisitante",
+      "Valor"
+    ],
+    "fields": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_materiais_saidas"
+  },
+  "bens-consolidados": {
+    "columns": [
+      "Data",
+      "Categoria",
+      "Tipo",
+      "Controle",
+      "Especificação",
+      "Descrição",
+      "Localização",
+      "Valor"
+    ],
+    "fields": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_bens_consolidado"
+  },
+  "bens-moveis": {
+    "columns": [
+      "Data",
+      "Tipo",
+      "Motivo",
+      "Identificação",
+      "Categoria",
+      "Bem",
+      "Descrição",
+      "Localização",
+      "Valor"
+    ],
+    "fields": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_bens_moveis"
+  },
+  "bens-imoveis": {
+    "columns": [
+      "Data",
+      "Bem",
+      "identificação",
+      "Descrição",
+      "Situação",
+      "Valor"
+    ],
+    "fields": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_bens_imoveis"
+  },
+  "frota": {
+    "columns": [
+      "Propriedade",
+      "Fabricação",
+      "Modelo",
+      "Marca",
+      "Modelo",
+      "Cor",
+      "Placa",
+      "Destinação",
+      "Localização"
+    ],
+    "fields": [
+      "propriedade",
+      "ano_fabricacao",
+      "ano_modelo",
+      "marca",
+      "modelo",
+      "cor",
+      "placa",
+      "situacao",
+      "localizacao"
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_frota_veiculos"
+  },
+  "orcamento-das-receitas": {
+    "columns": [
+      "Categoria",
+      "Origem",
+      "Espécie",
+      "Rubrica",
+      "Alínea",
+      "Subalínea",
+      "Fonte de Recurso",
+      "Valor Previsto"
+    ],
+    "fields": [
+      "categoria",
+      "origem",
+      "especie",
+      "rubrica",
+      "alinea",
+      "subalinea",
+      "fonte_recurso",
+      "valor"
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_orcamento_receitas"
+  },
+  "receita-realizada": {
+    "columns": [
+      "Data",
+      "Fonte de Recurso",
+      "Categoria",
+      "Origem",
+      "Espécie",
+      "Rubrica",
+      "Alínea",
+      "Subalínea",
+      "Previsto",
+      "Realizado"
+    ],
+    "fields": [
+      "data",
+      "fonte_recurso",
+      "categoria",
+      "origem",
+      "especie",
+      "rubrica",
+      "alinea",
+      "subalinea",
+      "valor_previsto",
+      "valor_realizado"
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_execucao_receitas"
+  },
+  "orcamento-das-despesas": {
+    "columns": [
+      "Função",
+      "Subfunção",
+      "Programa",
+      "Atividade/Projeto",
+      "Fonte de Recurso",
+      "Grupo da Despesa",
+      "Elemento da Despesa",
+      "Valor"
+    ],
+    "fields": [
+      "funcao",
+      "subfuncao",
+      "programa",
+      "atividade",
+      "fonte_recurso",
+      "grupo_despesa",
+      "elemento_despesa",
+      "valor"
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_orcamento_despesas"
+  },
+  "empenhos-e-favorecidos": {
+    "columns": [
+      "Data",
+      "Processo",
+      "Empenho",
+      "Histórico",
+      "Favorecido",
+      "Documento",
+      "Valor"
+    ],
+    "fields": [
+      "data",
+      "",
+      "empenho",
+      "",
+      "nome_favorecido",
+      "documento_favorecido",
+      "valor"
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_empenhos"
+  },
+  "liquidacoes-e-favorecidos": {
+    "columns": [
+      "Data",
+      "Processo",
+      "Liquidação",
+      "Histórico",
+      "Favorecido",
+      "Documento",
+      "Valor"
+    ],
+    "fields": [
+      "data",
+      "",
+      "liquidacao",
+      "",
+      "nome_favorecido",
+      "documento_favorecido",
+      "valor"
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_liquidacoes"
+  },
+  "pagamentos-e-favorecidos": {
+    "columns": [
+      "Data",
+      "Processo",
+      "Pagamento",
+      "Histórico",
+      "Favorecido",
+      "Documento",
+      "Valor"
+    ],
+    "fields": [
+      "data",
+      "",
+      "pagamento",
+      "",
+      "nome_favorecido",
+      "documento_favorecido",
+      "valor"
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_pagamentos"
+  },
+  "despesas-com-diarias": {
+    "columns": [
+      "Data",
+      "Processo",
+      "Pagamento",
+      "Histórico",
+      "Favorecido",
+      "Documento",
+      "Valor"
+    ],
+    "fields": [
+      "data",
+      "",
+      "pagamento",
+      "",
+      "nome_favorecido",
+      "documento_favorecido",
+      "valor"
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_diarias"
+  },
+  "despesas-com-passagens": {
+    "columns": [
+      "Data",
+      "Processo",
+      "Pagamento",
+      "Histórico",
+      "Favorecido",
+      "Documento",
+      "Valor"
+    ],
+    "fields": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_passagens"
+  },
+  "despesas-com-obras": {
+    "columns": [
+      "Data",
+      "Processo",
+      "Pagamento",
+      "Histórico",
+      "Favorecido",
+      "Documento",
+      "Valor"
+    ],
+    "fields": [
+      "data",
+      "",
+      "pagamento",
+      "",
+      "nome_favorecido",
+      "documento_favorecido",
+      "valor"
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_obras"
+  },
+  "tranferencias-cedidas": {
+    "columns": [
+      "Data",
+      "Beneficiário",
+      "Documento",
+      "Objeto",
+      "Vigência Inicial",
+      "Vigêencia Final",
+      "Valor a Ceder",
+      "Valor Contrapartida"
+    ],
+    "fields": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_convenios_firmados"
+  },
+  "transferencias-recebidas": {
+    "columns": [
+      "Data",
+      "Beneficiário",
+      "Documento",
+      "Objeto",
+      "Vigência Inicial",
+      "Vigêencia Final",
+      "Valor a Ceder",
+      "Valor Contrapartida"
+    ],
+    "fields": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_convenios_firmados"
+  },
+  "transferencias-extraorcamentarias": {
+    "columns": [
+      "Data",
+      "Tipo",
+      "Origem",
+      "Número",
+      "Conta Contábil",
+      "Fonte Recurso",
+      "Documento",
+      "Favorecido",
+      "Receita",
+      "Despesa"
+    ],
+    "fields": [
+      "data",
+      "tipo",
+      "origem",
+      "numero",
+      "conta_contabil",
+      "fonte_recurso",
+      "documento_favorecido",
+      "nome_favorecido",
+      "valor_receita",
+      "valor_despesa"
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_transf_extraorcamentarias"
+  },
+  "transferencias-intraorcamentarias": {
+    "columns": [
+      "Data",
+      "Tipo",
+      "Origem",
+      "Número",
+      "Conta Contábil",
+      "Fonte Recurso",
+      "Documento",
+      "Favorecido",
+      "Receita",
+      "Despesa"
+    ],
+    "fields": [
+      "data",
+      "tipo",
+      "origem",
+      "numero",
+      "conta_contabil",
+      "fonte_recurso",
+      "documento_favorecido",
+      "nome_favorecido",
+      "valor_receita",
+      "valor_despesa"
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_transf_intraorcamentarias"
+  },
+  "servidores": {
+    "columns": [
+      "Matrícula",
+      "Nome",
+      "Documento",
+      "Vínculo",
+      "Cargo",
+      "Admissão",
+      "Demissão",
+      "Situação"
+    ],
+    "fields": [
+      "matricula",
+      "nome",
+      "documento",
+      "regime",
+      "cargo",
+      "data_admissao",
+      "data_demissao",
+      "situacao"
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_servidores"
+  },
+  "plano-de-cargos-e-salarios": {
+    "columns": [
+      "Matrícula",
+      "Nome",
+      "Documento",
+      "Regime",
+      "Admissão",
+      "Demissão",
+      "Situação"
+    ],
+    "fields": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_plano_carreiras"
+  },
+  "cargos-e-vagas": {
+    "columns": [
+      "Cargo",
+      "Vagas Disponíveis",
+      "Vagas Ocupadas"
+    ],
+    "fields": [
+      "",
+      "",
+      ""
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_vagas_cargos"
+  },
+  "atos-dos-cargos": {
+    "columns": [
+      "Mês",
+      "Entidade",
+      "Exercício",
+      "Cargo",
+      "Nº Ato",
+      "Ano do Ato",
+      "Resumo Ementa",
+      "Ementa",
+      "Vigência"
+    ],
+    "fields": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_atos_cargos"
+  },
+  "cargos-comissionados": {
+    "columns": [
+      "Matrícula",
+      "Nome do Servidor",
+      "Documento",
+      "Cargo",
+      "Admissão",
+      "Demissão",
+      "Situação"
+    ],
+    "fields": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_cargos_confianca"
+  }
+}
