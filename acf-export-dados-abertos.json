@@ -1,0 +1,77 @@
+[
+    {
+        "key": "group_5ee27d71ab98d",
+        "title": "Dados Abertos",
+        "fields": [
+            {
+                "key": "field_5ee27d9215587",
+                "label": "Tipo de relatório",
+                "name": "report_type",
+                "type": "select",
+                "instructions": "Selecione um tipo de relatório de transparência para ser exibido na tabela",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "dispensas-e-inexigibilidades": "Dispensas e Inexigibilidades",
+                    "licitacoes": "Licitações",
+                    "contratos-e-aditivos": "Contratos e Aditivos",
+                    "termos-de-compromisso-atas": "Termos de Compromisso Atas",
+                    "ordem-de-compras": "Ordem de Compras",
+                    "entrada-de-estoque": "Entrada de Estoque",
+                    "saída-de-estoque": "Saída de Estoque",
+                    "bens-consolidados": "Bens Consolidados",
+                    "bens-moveis": "Bens Móveis",
+                    "bens-imoveis": "Bens Imóveis",
+                    "frota": "Frota",
+                    "orcamento-das-receitas": "Orçamento das Receitas",
+                    "receita-realizada": "Receita Realizada",
+                    "orcamento-das-despesas": "Orçamento das Despesas",
+                    "empenhos-e-favorecidos": "Empenhos e Favorecidos",
+                    "liquidacoes-e-favorecidos": "Liquidações e Favorecidos",
+                    "pagamentos-e-favorecidos": "Pagamentos e Favorecidos",
+                    "despesas-com-diarias": "Despesas com Diárias",
+                    "despesas-com-passagens": "Despesas com Passagens",
+                    "despesas-com-obras": "Despesas com Obras",
+                    "tranferencias-cedidas": "Transferências Cedidas",
+                    "transferencias-recebidas": "Transferências Recebidas",
+                    "transferencias-extraorcamentarias": "Transferências Extraorçamentárias",
+                    "transferencias-intraorcamentarias": "Transferências Intraorçamentárias",
+                    "servidores": "Servidores",
+                    "plano-de-cargos-e-salarios": "Plano de Cargos e Salários",
+                    "cargos-e-vagas": "Cargos e Vagas",
+                    "atos-dos-cargos": "Atos dos Cargos",
+                    "cargos-comissionados": "Cargos Comissionados"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "template-dados-abertos.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]
