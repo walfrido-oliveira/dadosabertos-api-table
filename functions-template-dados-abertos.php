@@ -81,6 +81,7 @@ function wpse_enqueue_dados_abertos_template_styles() {
     if ( is_page_template( 'template-dados-abertos.php' ) ) {
         wp_enqueue_style( 'template-dados-abertos', get_template_directory_uri() . '/css/template-dados-abertos.css' );
         wp_enqueue_script( 'template-dados-abertos', get_template_directory_uri() . '/js/template-dados-abertos.js', array( 'jquery' ), null, true );
+        wp_enqueue_script( 'wpb-fa', 'https://use.fontawesome.com/e7677b358c.js', array( 'jquery' ), null, true );
     }
 }
 add_action( 'wp_enqueue_scripts', 'wpse_enqueue_dados_abertos_template_styles' );
