@@ -29,3 +29,4 @@ node_modules/
 !functions-template-dados-abertos.php
 !acf-export-dados-abertos.json
 !dados-abertos.json
+!template-dados-abertos.js
