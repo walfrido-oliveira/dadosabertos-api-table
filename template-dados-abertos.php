@@ -94,7 +94,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
           </form>
       </div>
       <div class="row">
-        <table class="table table-bordered" id="dados-abertos-table">
+        <table class="table table-bordered paginated" id="dados-abertos-table">
         <thead>
           <tr>
             <?php foreach ($report[ $reportType ][ 'columns' ] as $value) : ?> 
@@ -139,6 +139,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
           <?php endif; ?>
         </tbody>
         </table>
+        <nav id="dados-abertos-pager"></nav>
       </div>
     </div>
 
