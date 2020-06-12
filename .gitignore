@@ -27,3 +27,5 @@ node_modules/
 !template-dados-abertos.php
 !tempate-dados-abertos.css
 !functions-template-dados-abertos.php
+!acf-export-dados-abertos.json
+!dados-aberto.json
