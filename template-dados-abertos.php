@@ -1,6 +1,6 @@
 <?php
   /**
-   * Template Name: Dados Aberto
+   * Template Name: Dados Abertos
    * Template Post Type: page
    *
    */
@@ -26,6 +26,12 @@
         "columns" => array( "Número", "Modalidade", "Processo", "Abertura", "Objeto", "Base Legal", "Situação", "Valor" ),
         "fields" => array( "numero", "modalidade", "processo", "abertura", "objeto", "base_legal", "situacao", "valor_homologado"),
         "url" => "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_dispensas_inexigibilidades"
+    ) ,
+    "dispensas-e-inexibilidade" => 
+      array(
+        "columns" => array( "Número", "Modalidade", "Processo", "Abertura", "Objeto", "Situação", "Valor" ),
+        "fields" => array( "numero", "modalidade", "processo", "abertura", "objeto", "situacao", "valor_homologado"),
+        "url" => "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_licitacoes"
     ) ,
   );
 
@@ -58,35 +64,14 @@
   /*** USE THE NEW HEADER FUNCTION **/
   WpkPageHelper::zn_get_subheader( $args );
 
-  $current_post_type = get_post_type( $post->ID );
-  $exclude_post_type = array(
-    'zn_layout',
-    'znpb_template_mngr',
-    'attachment',
-    'product',
-    'post',
-  );
-
-  // Check to see on what type of page we are on
-  $sidebar_layout = 'single_sidebar';
-  if ( ! in_array( $current_post_type, $exclude_post_type ) ) {
-    $sidebar_layout = $current_post_type . '_sidebar';
-  }
-
-  // Check to see if the page has a sidebar or not
-  $main_class = zn_get_sidebar_class($sidebar_layout);
-  if( strpos( $main_class , 'right_sidebar' ) !== false || strpos( $main_class , 'left_sidebar' ) !== false ) { $zn_config['sidebar'] = true; } else { $zn_config['sidebar'] = false; }
-  $sidebar_size = zget_option( 'sidebar_size', 'unlimited_sidebars', false, 3 );
-  $content_size = 12 - (int)$sidebar_size;
-  $zn_config['size'] = $zn_config['sidebar'] ? 'col-sm-8 col-md-'.$content_size : 'col-sm-12';
   ?>
 
   <nav>
   <?php
     wp_nav_menu( array( 
-        'theme_location' => 'dados-aberto', 
-        'container_id' => 'dados-aberto-menu',
-        'walker' => new CSS_Menu_Walker_Dados_Aberto() 
+        'theme_location' => 'dados-abertos', 
+        'container_id' => 'dados-abertos-menu',
+        'walker' => new CSS_Menu_Walker_Dados_Abertos() 
         ) 
       ); 
   ?>
@@ -95,7 +80,7 @@
   <main id="site-content" role="main">
 
     <div class="container">
-      <div class="row dados-aberto-filter">
+      <div class="row dados-abertos-filter">
           <form action="">
             <div class="row">
               <div class="col-md-4">
@@ -115,7 +100,7 @@
           </form>
       </div>
       <div class="row">
-        <table class="table" id="dados-aberto-table">
+        <table class="table" id="dados-abertos-table">
         <thead>
           <tr>
             <?php foreach ($report[ $reportType ][ 'columns' ] as $value) : ?> 

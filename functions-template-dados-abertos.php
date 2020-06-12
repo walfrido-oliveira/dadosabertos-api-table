@@ -4,16 +4,16 @@
  *
  * Register menu to dados aberto API
  */
-function wpb_custom_dados_aberto() {
-  register_nav_menu('dados-aberto',__( 'Dados Aberto' ));
+function wpb_custom_dados_abertos() {
+  register_nav_menu('dados-abertos',__( 'Dados Abertos' ));
 }
-add_action( 'init', 'wpb_custom_dados_aberto' );
+add_action( 'init', 'wpb_custom_dados_abertos' );
 
 /*
 *
 * Custom Walker to dados aberto API
 */
-class CSS_Menu_Walker_Dados_Aberto extends Walker {
+class CSS_Menu_Walker_Dados_Abertos extends Walker {
 
 	var $db_fields = array('parent' => 'menu_item_parent', 'id' => 'db_id');
 	
@@ -77,9 +77,9 @@ class CSS_Menu_Walker_Dados_Aberto extends Walker {
 *
 * Custom CSS to dados aberto template page
 */
-function wpse_enqueue_dados_aberto_template_styles() {
-    if ( is_page_template( 'template-dados-aberto.php' ) ) {
-        wp_enqueue_style( 'template-dados-aberto', get_template_directory_uri() . '/css/template-dados-aberto.css' );
+function wpse_enqueue_dados_abertos_template_styles() {
+    if ( is_page_template( 'template-dados-abertos.php' ) ) {
+        wp_enqueue_style( 'template-dados-abertos', get_template_directory_uri() . '/css/template-dados-abertos.css' );
     }
 }
-add_action( 'wp_enqueue_scripts', 'wpse_enqueue_dados_aberto_template_styles' );
+add_action( 'wp_enqueue_scripts', 'wpse_enqueue_dados_abertos_template_styles' );
