@@ -171,3 +171,21 @@ z-index: 999;
   color: #337ab7; 
   text-transform: uppercase;
 }
+
+#dados-abertos-table .input-group-addon {
+  color: #337ab7;
+}
+
+#dados-abertos-table tbody {
+  background-color: #fff;
+}
+
+#dados-abertos-table > tbody > tr:hover {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+#dados-abertos-table .empty-row:hover {
+  background-color: #fff;
+  color: #535353;
+}
