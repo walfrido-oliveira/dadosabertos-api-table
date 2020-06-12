@@ -71,16 +71,20 @@
       <div class="row dados-abertos-filter">
           <form action="">
             <div class="row">
-              <div class="col-md-4">
+              <?php if ( $report[ $reportType ][ 'filter' ][ 'year' ] ) :?>
+              <div class="col-md-<?php echo $report[ $reportType ][ 'filter' ][ 'year' ] && $report[ $reportType ][ 'filter' ][ 'month' ] ? '4' : '6'  ?>">
                 <input class="form-control" type="number" name="ano" id="year" min="1900" max="2099" value="<?php echo $year; ?>">
               </div>
-              <div class="col-md-4">
+              <?php endif; ?>
+              <?php if ( $report[ $reportType ][ 'filter' ][ 'month' ] ) :?>
+              <div class="col-md-<?php echo $report[ $reportType ][ 'filter' ][ 'year' ] && $report[ $reportType ][ 'filter' ][ 'month' ] ? '4' : '6'  ?>">
                 <select class="form-control" name="mes" id="month">
                   <?php foreach ($months as $key => $value) :?>
                     <option value="<?php echo $key; ?>" <?php if ($month == $key) echo 'selected'; ?>><?php echo $value; ?></option>
                   <?php endforeach; ?>
                 </select>
               </div>
+              <?php endif; ?>
               <div class="col-md-4">
                 <button type="submit" class="btn btn-light mb-2">Aplicar</button>
               </div>
