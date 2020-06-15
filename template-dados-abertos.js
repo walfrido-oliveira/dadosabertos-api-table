@@ -1,5 +1,28 @@
 (function( $ ){
   var currentPage = 0;
+  var shortColumns = [];
+
+  $(document).ready(function() {
+    var colCount = 0;
+    $('#dados-abertos-table tr:nth-child(1) td').each(function () {
+      if ($(this).attr('colspan')) {
+          colCount += +$(this).attr('colspan');
+      } else {
+          colCount++;
+      }
+    });
+    for (let index = 0; index < colCount; index++) {
+      shortColumns.push(true);
+    }
+
+    $('#dados-abertos-table').datatable({
+      pageSize: 10,
+      sort: shortColumns,
+      filterText: '',
+      pagingDivSelector: "#dados-abertos-pager"
+    });
+    
+  })
   
   function paginateTable() {
     $('#dados-abertos-pager').empty();
@@ -56,11 +79,5 @@
     });
   });
 
-  $('#dados-abertos-table').datatable({
-    pageSize: 10,
-    sort: [true],
-    filterText: '',
-    pagingDivSelector: "#dados-abertos-pager"
-  });
 
 })(jQuery);

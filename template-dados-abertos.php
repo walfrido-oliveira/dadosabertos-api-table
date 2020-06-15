@@ -122,7 +122,6 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
                 <?php foreach ($report[ $reportType ][ 'fields' ] as $key2 => $name) : ?> 
                   <td>
                     <?php 
-                    //var_dump( array_column( $result , 'situacao' ));
                       $v = str_replace( 'T00:00:00', '', $value[ $name ] );
                       if ( $report[ $reportType ][ 'types' ][ $key2 ] == 'c' ) :
                         echo 'R$ ' . number_format( $v, 2, ',', '.' );
