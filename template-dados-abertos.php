@@ -119,13 +119,13 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
           <tbody>
             <?php foreach ($result as $key => $value) : ?> 
               <tr>
-                <?php foreach ($report[ $reportType ][ 'fields' ] as $name) : ?> 
+                <?php foreach ($report[ $reportType ][ 'fields' ] as $key2 => $name) : ?> 
                   <td>
                     <?php 
                       $v = str_replace( 'T00:00:00', '', $value[ $name ] );
-                      if ( is_numeric( $v ) ) :
+                      if ( $report[ $reportType ][ 'types' ][ $key2 ] == 'c' ) :
                         echo 'R$ ' . number_format( $v, 2, ',', '.' );
-                      elseif ( DateTime::createFromFormat( 'Y-m-d', $v ) !== FALSE ) :
+                      elseif ( $report[ $reportType ][ 'types' ][ $key2 ] == 'd' ) :
                         $date = date_create( $v );
                         echo date_format( $date, 'd/m/Y' );
                       else :

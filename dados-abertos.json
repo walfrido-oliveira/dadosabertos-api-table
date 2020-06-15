@@ -20,6 +20,9 @@
       "situacao",
       "valor_homologado"
     ],
+    "types": [
+      "s","s","s","d","s","s","s","c"
+    ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_dispensas_inexigibilidades",
     "filter": {
       "year": true,
@@ -45,6 +48,9 @@
       "situacao",
       "valor_homologado"
     ],
+    "types": [
+      "s","s","s","d","s","s","c"
+    ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_licitacoes",
     "filter": {
       "year": true,
@@ -69,6 +75,9 @@
       "documento_favorecido",
       "situacao",
       "valor"
+    ],
+    "types": [
+      "s","s","s","s","s","s","c"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_contratos",
     "filter": {
@@ -96,7 +105,11 @@
       "documento_favorecido",
       "nome_favorecido",
       "objeto",
+      "situacao",
       "valor"
+    ],
+    "types": [
+      "s","s","d","s","s","s","s","s","c"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_atas",
     "filter": {
@@ -120,6 +133,9 @@
       "documento_favorecido",
       "nome_favorecido",
       "valor"
+    ],
+    "types": [
+      "s","s","d","s","s","c"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_ordemcompras",
     "filter": {
@@ -146,6 +162,9 @@
       "",
       ""
     ],
+    "types": [
+      "s","s","s","s","s","s","s"
+    ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_materiais_entradas",
     "filter": {
       "year": false,
@@ -166,6 +185,9 @@
       "",
       "",
       ""
+    ],
+    "types": [
+      "s","s","s","s","s"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_materiais_saidas",
     "filter": {
@@ -194,6 +216,9 @@
       "",
       ""
     ],
+    "types": [
+      "s","s","s","s","s","s","s","s"
+    ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_bens_consolidado",
     "filter": {
       "year": false,
@@ -213,19 +238,22 @@
       "Valor"
     ],
     "fields": [
+      "data",
+      "tipo",
       "",
+      "classe",
       "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
+      "bem",
+      "descricao",
+      "localizacao",
+      "valor"
+    ],
+    "types": [
+      "d","s","s","s","s","s","s","s","c"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_bens_moveis",
     "filter": {
-      "year": false,
+      "year": true,
       "month": false
     }
   },
@@ -245,6 +273,9 @@
       "",
       "",
       ""
+    ],
+    "types": [
+      "s","s","s","s","s","s"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_bens_imoveis",
     "filter": {
@@ -275,6 +306,9 @@
       "situacao",
       "localizacao"
     ],
+    "types": [
+      "s","s","s","s","s","s","s","s","s"
+    ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_frota_veiculos",
     "filter": {
       "year": false,
@@ -301,6 +335,9 @@
       "subalinea",
       "fonte_recurso",
       "valor"
+    ],
+    "types": [
+      "s","s","s","s","s","s","s","c"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_orcamento_receitas",
     "filter": {
@@ -333,6 +370,9 @@
       "valor_previsto",
       "valor_realizado"
     ],
+    "types": [
+      "d","s","s","s","s","s","s","s","c","c"
+    ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_execucao_receitas",
     "filter": {
       "year": true,
@@ -360,6 +400,9 @@
       "elemento_despesa",
       "valor"
     ],
+    "types": [
+      "s","s","s","s","s","s","s","c"
+    ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_orcamento_despesas",
     "filter": {
       "year": true,
@@ -384,6 +427,9 @@
       "nome_favorecido",
       "documento_favorecido",
       "valor"
+    ],
+    "types": [
+      "d","s","s","s","s","s","c"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_empenhos",
     "filter": {
@@ -410,6 +456,9 @@
       "documento_favorecido",
       "valor"
     ],
+    "types": [
+      "d","s","s","s","s","s","c"
+    ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_liquidacoes",
     "filter": {
       "year": true,
@@ -434,6 +483,9 @@
       "nome_favorecido",
       "documento_favorecido",
       "valor"
+    ],
+    "types": [
+      "d","s","s","s","s","s","c"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_pagamentos",
     "filter": {
@@ -460,6 +512,9 @@
       "documento_favorecido",
       "valor"
     ],
+    "types": [
+      "d","s","s","s","s","s","c"
+    ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_diarias",
     "filter": {
       "year": true,
@@ -485,6 +540,9 @@
       "",
       ""
     ],
+    "types": [
+      "s","s","s","s","s","s","s"
+    ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_passagens",
     "filter": {
       "year": false,
@@ -509,6 +567,9 @@
       "nome_favorecido",
       "documento_favorecido",
       "valor"
+    ],
+    "types": [
+      "d","s","s","s","s","s","c"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_obras",
     "filter": {
@@ -536,6 +597,9 @@
       "",
       ""
     ],
+    "types": [
+      "s","s","s","s","s","s","s"
+    ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_convenios_firmados",
     "filter": {
       "year": false,
@@ -561,6 +625,9 @@
       "",
       "",
       ""
+    ],
+    "types": [
+      "s","s","s","s","s","s","s"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_convenios_firmados",
     "filter": {
@@ -593,6 +660,9 @@
       "valor_receita",
       "valor_despesa"
     ],
+    "types": [
+      "d","s","s","s","s","s","s","s","c","c"
+    ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_transf_extraorcamentarias",
     "filter": {
       "year": true,
@@ -624,6 +694,9 @@
       "valor_receita",
       "valor_despesa"
     ],
+    "types": [
+      "d","s","s","s","s","s","s","s","c","c"
+    ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_transf_intraorcamentarias",
     "filter": {
       "year": true,
@@ -651,6 +724,9 @@
       "data_demissao",
       "situacao"
     ],
+    "types": [
+      "s","s","s","s","s","d","d","s"
+    ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_servidores",
     "filter": {
       "year": true,
@@ -676,6 +752,9 @@
       "",
       ""
     ],
+    "types": [
+      "s","s","s","s","d","d","s"
+    ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_plano_carreiras",
     "filter": {
       "year": false,
@@ -692,6 +771,9 @@
       "",
       "",
       ""
+    ],
+    "types": [
+      "s","s","s"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_vagas_cargos",
     "filter": {
@@ -722,6 +804,9 @@
       "",
       ""
     ],
+    "types": [
+      "s","s","s","s","s","d","s","s","s"
+    ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_atos_cargos",
     "filter": {
       "year": false,
@@ -746,6 +831,9 @@
       "",
       "",
       ""
+    ],
+    "types": [
+      "s","s","s","s","s","s","s"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_cargos_confianca",
     "filter": {
