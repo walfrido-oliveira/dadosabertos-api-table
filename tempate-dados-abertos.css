@@ -1,5 +1,5 @@
 .dados-abertos-filter {
-  background-color: #337ab7; 
+  background-color: #34495e; 
   padding: 20px;
   margin-top: 20px;
 }
@@ -32,7 +32,7 @@
 
 #dados-abertos-menu,
 #dados-abertos-menu > ul > li > ul > li a:hover {
-  background: #337ab7;
+  background: #34495e;
 }
 
 #dados-abertos-menu > ul {
@@ -168,12 +168,12 @@ z-index: 999;
 
 /*table*/
 #dados-abertos-table th {
-  color: #337ab7; 
+  color: #34495e; 
   text-transform: uppercase;
 }
 
 #dados-abertos-table .input-group-addon {
-  color: #337ab7;
+  color: #34495e;
 }
 
 #dados-abertos-table tbody {
@@ -181,7 +181,7 @@ z-index: 999;
 }
 
 #dados-abertos-table > tbody > tr:hover {
-  background-color: #337ab7;
+  background-color: #34495e;
   color: #fff;
 }
 
@@ -189,3 +189,16 @@ z-index: 999;
   background-color: #fff;
   color: #535353;
 }
+/* end table */
+
+/* Pagiantion */
+#dados-abertos-pager .active a {
+  background-color: #34495e;
+  border-color: #34495e;
+  color: #fff;
+}
+
+#dados-abertos-pager  a {
+  color: #34495e;
+}
+/* end pagination */
