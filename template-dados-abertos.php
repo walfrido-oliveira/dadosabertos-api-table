@@ -107,7 +107,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
               <?php foreach ($report[ $reportType ][ 'columns' ] as $value) : ?> 
                 <th>
                   <div class="input-group">
-                    <input onkeyup="filterTable()" class="form-control" type="text" name="<?php echo sanitize_title( $value ); ?>">
+                    <input class="form-control dados-abertos-filter-input" type="text" name="<?php echo sanitize_title( $value ); ?>">
                     <span class="input-group-addon">
                       <i class="fa fa-filter"  aria-hidden='true'></i>
                     </span>
@@ -122,6 +122,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
                 <?php foreach ($report[ $reportType ][ 'fields' ] as $key2 => $name) : ?> 
                   <td>
                     <?php 
+                    //var_dump( array_column( $result , 'situacao' ));
                       $v = str_replace( 'T00:00:00', '', $value[ $name ] );
                       if ( $report[ $reportType ][ 'types' ][ $key2 ] == 'c' ) :
                         echo 'R$ ' . number_format( $v, 2, ',', '.' );
@@ -136,9 +137,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
                 <?php endforeach; ?>
               </tr>
             <?php endforeach; ?>
-            <?php if ( count( $result ) == 0 ) : ?>
-              <tr class="empty-row"><td colspan="8" class="text-center">A pesquisa não retornou  nenhum resultado</td></tr>
-            <?php endif; ?>
+  
           </tbody>
         </table>
         <nav id="dados-abertos-pager"></nav>

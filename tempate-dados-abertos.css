@@ -206,3 +206,19 @@ z-index: 999;
   color: #34495e;
 }
 /* end pagination */
+
+/* SORT HEADER */
+.sorting {
+	cursor: pointer ;
+	background-image: url("../images/sort_both.png") ;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.sorting-desc {
+	background-image: url("../images/sort_desc.png") ;
+}
+
+.sorting-asc {
+	background-image: url("../images/sort_asc.png") ;
+}

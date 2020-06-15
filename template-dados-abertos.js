@@ -1,6 +1,9 @@
 (function( $ ){
   var currentPage = 0;
-  $('table.paginated').each(function() {
+  
+  function paginateTable() {
+    $('#dados-abertos-pager').empty();
+    $('table.paginated').each(function() {
       var numPerPage = 10;
       var $table = $(this);
       $table.bind('repaginate', function() {
@@ -25,7 +28,8 @@
       }
       $pager.append('<li class="page-item"><a class="page-link" id="next" href="#">Próximo</a></li>')
       $pager.appendTo('#dados-abertos-pager').find('.page-item').eq(1).addClass('active');
-  });
+    });
+  }
 
   $(document).on('click', '#prev', function(event) {
     var $table = $('table.paginated');
@@ -45,12 +49,18 @@
     $('.page-item').eq(currentPage + 1).addClass('active').siblings().removeClass('active');
   });
 
+  $('.dados-abertos-filter-input').on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $('#dados-abertos-table tbody tr').filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+
+  $('#dados-abertos-table').datatable({
+    pageSize: 10,
+    sort: [true],
+    filterText: '',
+    pagingDivSelector: "#dados-abertos-pager"
+  });
+
 })(jQuery);
-
-function filterTable() {
-  const query = q => document.querySelectorAll(q);
-  const filters = [...query('th input')].map(e => new RegExp(e.value, 'i'));
-
-  query('tbody tr').forEach(row => row.style.display = 
-    filters.every((f, i) => f.test(row.cells[i].textContent)) ? '' : 'none');
-}
