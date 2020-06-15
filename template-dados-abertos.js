@@ -39,8 +39,6 @@
   $(document).on('click', '#next', function(event) {
     var $table = $('table.paginated');
     event.preventDefault();
-    console.log($('.page-item').length);
-    console.log(currentPage);
     if((currentPage + 1) > ($('.page-item').length - 3)) return;
     currentPage++;
     $table.trigger('repaginate');
@@ -48,7 +46,6 @@
   });
 
 })(jQuery);
-
 
 function filterTable() {
   const query = q => document.querySelectorAll(q);
