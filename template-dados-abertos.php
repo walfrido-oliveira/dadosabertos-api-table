@@ -87,57 +87,59 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
                 </select>
               </div>
               <?php endif; ?>
+              <?php if ( $report[ $reportType ][ 'filter' ][ 'year' ] || $report[ $reportType ][ 'filter' ][ 'month' ] ) :?>
               <div class="col-md-4">
                 <button type="submit" class="btn btn-light mb-2">Aplicar</button>
               </div>
+              <?php endif; ?>
             </div>
           </form>
       </div>
       <div class="row">
         <table class="table table-bordered paginated" id="dados-abertos-table">
-        <thead>
-          <tr>
-            <?php foreach ($report[ $reportType ][ 'columns' ] as $value) : ?> 
-              <th><?php echo $value; ?></th>
-            <?php endforeach; ?>
-          </tr>
-          <tr>
-            <?php foreach ($report[ $reportType ][ 'columns' ] as $value) : ?> 
-              <th>
-                <div class="input-group">
-                  <input onkeyup="filterTable()" class="form-control" type="text" name="<?php echo sanitize_title( $value ); ?>">
-                  <span class="input-group-addon">
-                    <i class="fa fa-filter"  aria-hidden='true'></i>
-                  </span>
-                </div>
-              </th>
-            <?php endforeach; ?>
-          </tr>
-        </thead>
-        <tbody>
-          <?php foreach ($result as $key => $value) : ?> 
+          <thead>
             <tr>
-              <?php foreach ($report[ $reportType ][ 'fields' ] as $name) : ?> 
-                <td>
-                  <?php 
-                    $v = str_replace( 'T00:00:00', '', $value[ $name ] );
-                    if ( is_numeric( $v ) ) :
-                      echo 'R$ ' . number_format( $v, 2, ',', '.' );
-                    elseif ( DateTime::createFromFormat( 'Y-m-d', $v ) !== FALSE ) :
-                      $date = date_create( $v );
-                      echo date_format( $date, 'd/m/Y' );
-                    else :
-                      echo $v;
-                    endif;
-                  ?>
-                </td>
+              <?php foreach ($report[ $reportType ][ 'columns' ] as $value) : ?> 
+                <th><?php echo $value; ?></th>
               <?php endforeach; ?>
             </tr>
-          <?php endforeach; ?>
-          <?php if ( count( $result ) == 0 ) : ?>
-            <tr class="empty-row"><td colspan="8" class="text-center">A pesquisa não retornou  nenhum resultado</td></tr>
-          <?php endif; ?>
-        </tbody>
+            <tr>
+              <?php foreach ($report[ $reportType ][ 'columns' ] as $value) : ?> 
+                <th>
+                  <div class="input-group">
+                    <input onkeyup="filterTable()" class="form-control" type="text" name="<?php echo sanitize_title( $value ); ?>">
+                    <span class="input-group-addon">
+                      <i class="fa fa-filter"  aria-hidden='true'></i>
+                    </span>
+                  </div>
+                </th>
+              <?php endforeach; ?>
+            </tr>
+          </thead>
+          <tbody>
+            <?php foreach ($result as $key => $value) : ?> 
+              <tr>
+                <?php foreach ($report[ $reportType ][ 'fields' ] as $name) : ?> 
+                  <td>
+                    <?php 
+                      $v = str_replace( 'T00:00:00', '', $value[ $name ] );
+                      if ( is_numeric( $v ) ) :
+                        echo 'R$ ' . number_format( $v, 2, ',', '.' );
+                      elseif ( DateTime::createFromFormat( 'Y-m-d', $v ) !== FALSE ) :
+                        $date = date_create( $v );
+                        echo date_format( $date, 'd/m/Y' );
+                      else :
+                        echo $v;
+                      endif;
+                    ?>
+                  </td>
+                <?php endforeach; ?>
+              </tr>
+            <?php endforeach; ?>
+            <?php if ( count( $result ) == 0 ) : ?>
+              <tr class="empty-row"><td colspan="8" class="text-center">A pesquisa não retornou  nenhum resultado</td></tr>
+            <?php endif; ?>
+          </tbody>
         </table>
         <nav id="dados-abertos-pager"></nav>
       </div>
