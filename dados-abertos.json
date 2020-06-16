@@ -342,7 +342,7 @@
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_orcamento_receitas",
     "filter": {
       "year": true,
-      "month": true
+      "month": false
     }
   },
   "receita-realizada": {
