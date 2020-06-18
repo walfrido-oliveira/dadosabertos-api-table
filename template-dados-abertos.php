@@ -39,9 +39,11 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
   $url .= "?ano=$year&mes=$month";
 
   $xmlString = file_get_contents( $url );
+  //while( count( $xmlString ) == 0) {
+    //$xmlString = file_get_contents( $url );
+  //}
 
   $xml = simplexml_load_string( $xmlString );
-
   $result = json_decode(  $xml, true );
 
   get_header();
@@ -129,8 +131,13 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
                           break;
                         case 'd':
                           $v = str_replace( 'T00:00:00', '', $v );
+                          $v = str_replace( ' 00:00:00', '', $v );
+                          if ( $v == '' ) break;
                           $date = date_create( $v );
-                          echo date_format( $date, 'd/m/Y' );
+                          if ( $date )
+                            echo date_format( $date, 'd/m/Y' ); 
+                          else 
+                            echo $v;
                           break;
                         case 'i':
                           $width = substr( $report[ $reportType ][ 'types' ][ $key2 ], 3 );
