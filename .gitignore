@@ -30,3 +30,4 @@ node_modules/
 !acf-export-dados-abertos.json
 !dados-abertos.json
 !template-dados-abertos.js
+!datatable.js
