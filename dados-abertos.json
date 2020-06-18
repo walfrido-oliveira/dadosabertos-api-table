@@ -61,6 +61,7 @@
     "columns": [
       "Contrato",
       "Processo",
+      "Assinatura",
       "Objeto",
       "Favorecido",
       "Documento",
@@ -70,6 +71,7 @@
     "fields": [
       "contrato",
       "processo",
+      "assinatura",
       "objeto",
       "nome_favorecido",
       "documento_favorecido",
@@ -77,7 +79,7 @@
       "valor"
     ],
     "types": [
-      "s","s","s","s","s","s","c"
+      "s","s","d","s","s","s","s","c"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_contratos",
     "filter": {
@@ -109,7 +111,7 @@
       "valor"
     ],
     "types": [
-      "s","s","d","s","s","s","s","s","c"
+      "i:6","s","d","s","s","s","s","s","c"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_atas",
     "filter": {
@@ -128,7 +130,7 @@
     ],
     "fields": [
       "ordem_compra",
-      "unidade_gestora",
+      "secretaria",
       "data_ordem",
       "documento_favorecido",
       "nome_favorecido",

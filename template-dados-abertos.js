@@ -15,7 +15,14 @@
       shortColumns.push(true);
     }
     let value  = $( "#page_length option:selected" ).text();
-    setTable(value);
+    let tableLength = $('#dados-abertos-table tbody tr').length;
+    if (tableLength > 0) {
+      setTable(value);
+    } else {
+      let columns = $('#dados-abertos-table thead tr:first th').length;
+      $('#dados-abertos-table tbody').append("<tr><td class='empty-row' colspan='" + columns + "'>Sem Informação</td></tr>");
+      $('#dados-abertos-page-length').hide();
+    }
   })
 
   function setTable(pageSize = 10) {
@@ -25,6 +32,10 @@
       filters: shortColumns,
       filterText: '',
       pagingDivSelector: "#dados-abertos-pager",
+      firstPage: false,
+      prevPage: 'Anterior',
+      nextPage: 'Próximo',
+      lastPage: false
     }); 
   }
 

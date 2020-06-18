@@ -122,25 +122,34 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
                 <?php foreach ($report[ $reportType ][ 'fields' ] as $key2 => $name) : ?> 
                   <td>
                     <?php 
-                      $v = str_replace( 'T00:00:00', '', $value[ $name ] );
-                      if ( $report[ $reportType ][ 'types' ][ $key2 ] == 'c' ) :
-                        echo 'R$ ' . number_format( $v, 2, ',', '.' );
-                      elseif ( $report[ $reportType ][ 'types' ][ $key2 ] == 'd' ) :
-                        $date = date_create( $v );
-                        echo date_format( $date, 'd/m/Y' );
-                      else :
-                        echo $v;
-                      endif;
+                      $v = $value[ $name ];
+                      switch ( $report[ $reportType ][ 'types' ][ $key2 ][0] ) :
+                        case 'c':
+                          echo 'R$ ' . number_format( $v, 2, ',', '.' );
+                          break;
+                        case 'd':
+                          $v = str_replace( 'T00:00:00', '', $v );
+                          $date = date_create( $v );
+                          echo date_format( $date, 'd/m/Y' );
+                          break;
+                        case 'i':
+                          $width = substr( $report[ $reportType ][ 'types' ][ $key2 ], 3 );
+                          $padded = str_pad((string)$v, $width, "0", STR_PAD_LEFT); 
+                          echo $padded;
+                          break;
+                        default:
+                          echo $v;
+                          break;
+                      endswitch;
                     ?>
                   </td>
                 <?php endforeach; ?>
               </tr>
             <?php endforeach; ?>
-  
           </tbody>
         </table>
         <div class="row">
-          <div class="col-md-10">
+          <div class="col-md-9">
             <nav id="dados-abertos-pager"></nav>
           </div>
           <div class="col-md-2 form-inline" id="dados-abertos-page-length">
@@ -151,6 +160,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
                   <option value="10">10</option>
                   <option value="20">20</option>
                   <option value="30">30</option>
+                  <option value="<?php echo count( $result ); ?>">Tudo</option>
                 </select>
               </div>
             </div>

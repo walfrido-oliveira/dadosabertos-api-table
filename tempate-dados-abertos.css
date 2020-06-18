@@ -8,7 +8,7 @@
   float: right;
 }
 
-/* start dados aberto menu   */
+/* DADOS-ABERTOS-MENU   */
 #dados-abertos-menu,
 #dados-abertos-menu ul,
 #dados-abertos-menu li,
@@ -168,9 +168,20 @@ z-index: 999;
 #dados-abertos-menu .active {
   background-color: #0669a3;
 }
-/* end dados aberto menu */
+/* END DADOS-ABERTOS-MENU */
 
-/*table*/
+/* DADOS-ABERTOS-TABLE */
+#dados-abertos-table .empty-row {
+  color: #535353;
+  background-color: #fff;
+  text-align: center;
+}
+
+#dados-abertos-table .empty-row:hover {
+  color: #535353;
+  background-color: #fff;
+}
+
 .datatable-filter-line {
   display: none;
 }
@@ -187,6 +198,10 @@ z-index: 999;
   background-color: #fff;
 }
 
+#dados-abertos-table td {
+  vertical-align: middle;
+}
+
 #dados-abertos-table > tbody > tr:hover {
   background-color: #34495e;
   color: #fff;
@@ -196,9 +211,9 @@ z-index: 999;
   background-color: #fff;
   color: #535353;
 }
-/* end table */
+/* END DADOS-ABERTOS-TABLE */
 
-/* Pagiantion */
+/* DADOS-ABERTOS-PAGER */
 #dados-abertos-pager .active a {
   background-color: #34495e;
   border-color: #34495e;
@@ -208,7 +223,11 @@ z-index: 999;
 #dados-abertos-pager  a {
   color: #34495e;
 }
-/* end pagination */
+
+#dados-abertos-pager ul {
+  cursor: pointer;
+}
+/* END DADOS-ABERTOS-PAGER */
 
 /* SORT HEADER */
 .sorting {
