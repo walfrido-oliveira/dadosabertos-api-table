@@ -39,12 +39,22 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
   $url .= "?ano=$year&mes=$month";
 
   $xmlString = file_get_contents( $url );
-  //while( count( $xmlString ) == 0) {
-    //$xmlString = file_get_contents( $url );
-  //}
-
   $xml = simplexml_load_string( $xmlString );
   $result = json_decode(  $xml, true );
+
+  while( count( $result ) == 0 && !isset( $_GET[ 'ano' ] ) && !isset( $_GET[ 'mes' ] )) {
+    $month--;
+    if ( $month == 0 ) {
+      $month = 12;
+      $year--;
+    }
+    $url = $report[ $reportType ][ 'url' ];
+    $url .= "?ano=$year&mes=$month";
+    $xmlString = file_get_contents( $url );
+    $xml = simplexml_load_string( $xmlString );
+    $result = json_decode(  $xml, true );
+    if ( $year == 2017 && $month == 1 ) break;
+  }
 
   get_header();
   $args = array();
