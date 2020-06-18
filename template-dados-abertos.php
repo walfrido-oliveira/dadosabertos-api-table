@@ -164,6 +164,29 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
               </tr>
             <?php endforeach; ?>
           </tbody>
+          <?php if( $report[ $reportType ][ 'footer' ] ) : ?>
+            <tfoot>
+              <tr>
+                <?php foreach ( $report[ $reportType ][ 'columns' ] as $key => $value ) : ?> 
+                  <td><strong>
+                    <?php foreach( $report[ $reportType ][ 'footer' ] as $value2 ) :
+                      if ( $value2['index'] == $key ) :
+                        switch ( $value2['type'] ) :
+                          case 'COUNT_ROW':
+                            echo sprintf( '%s %d %s',  $value2[ 'prefix' ], count( $result ), $value2[ 'posfix' ] );
+                            break;
+                          case 'SUM_COLUMN':
+                            $sum = array_sum( array_column( $result, $report[ $reportType ][ 'fields' ][ $key ] ) );
+                            //var_dump( array_sum( array_column( $result, $report[ $reportType ][ 'fields' ][ $key ] ) ) );
+                            echo sprintf( '%s R$ %s %s',  $value2[ 'prefix' ], number_format( $sum, 2, ',', '.' ), $value2[ 'posfix' ] );
+                        endswitch;
+                      endif;
+                    endforeach; ?>
+                  </strong></td>
+                <?php endforeach; ?>
+              </tr>
+            </tfoot>
+          <?php endif; ?>
         </table>
         <div class="row">
           <div class="col-md-9">

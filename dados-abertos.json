@@ -308,6 +308,14 @@
       "situacao",
       "localizacao"
     ],
+    "footer": [
+      {
+        "index": 7,
+        "prefix": "Total de",
+        "posfix": "Veículos(s)",
+        "type": "COUNT_ROW"
+      }
+    ],
     "types": [
       "s","s","s","s","s","s","s","s","s"
     ],
@@ -662,6 +670,20 @@
       "valor_receita",
       "valor_despesa"
     ],
+    "footer": [
+      {
+        "index": 8,
+        "prefix": "Total Receita",
+        "posfix": "",
+        "type": "SUM_COLUMN"
+      },
+      {
+        "index": 9,
+        "prefix": "Total Despesa",
+        "posfix": "",
+        "type": "SUM_COLUMN"
+      }
+    ],
     "types": [
       "d","s","s","s","s","s","s","s","c","c"
     ],
@@ -695,6 +717,20 @@
       "nome_favorecido",
       "valor_receita",
       "valor_despesa"
+    ],
+    "footer": [
+      {
+        "index": 8,
+        "prefix": "Total Receita",
+        "posfix": "",
+        "type": "SUM_COLUMN"
+      },
+      {
+        "index": 9,
+        "prefix": "Total Despesa",
+        "posfix": "",
+        "type": "SUM_COLUMN"
+      }
     ],
     "types": [
       "d","s","s","s","s","s","s","s","c","c"
