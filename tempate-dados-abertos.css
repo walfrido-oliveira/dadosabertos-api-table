@@ -225,3 +225,23 @@ z-index: 999;
 .sorting-asc {
 	background-image: url("../images/sort_asc.png") ;
 }
+/* END SORT HEADER  */
+
+/* PAGE LENGTH*/
+#dados-abertos-page-length {
+  margin: 20px 0;
+}
+
+#dados-abertos-page-length label {
+  margin-top: 5px;
+  padding: 0;
+}
+
+#dados-abertos-page-length select {
+  padding: 0;
+}
+
+#dados-abertos-page-length select {
+  padding: 0;
+}
+/* END PAGE LENGTH*/

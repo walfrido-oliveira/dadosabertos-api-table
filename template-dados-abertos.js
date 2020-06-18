@@ -14,26 +14,32 @@
     for (let index = 0; index < colCount; index++) {
       shortColumns.push(true);
     }
-    table = $('#dados-abertos-table').datatable({
-      pageSize: 10,
+    setTable(10);
+  })
+
+  function setTable(pageSize = 10) {
+    table = new DataTable(document.querySelector('#dados-abertos-table'), {
+      pageSize: pageSize,
       sort: shortColumns,
       filters: shortColumns,
       filterText: '',
       pagingDivSelector: "#dados-abertos-pager",
     }); 
-  })
+    table.refresh();
+  }
 
   $('.dados-abertos-filter-input').on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $('#dados-abertos-table tbody tr').filter(function() {
-     //$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-    });
-
     var index = $(this).parent().parent().index();
     var input = $('#dados-abertos-table thead tr').eq(2).find('td').eq(index).find('input');
     input.val($(this).val());
     input.keyup();
   });
 
+  $('#page_length').on('change', function() {
+    let value = $(this).val();
+    //table.option('pageSize', value);
+    table.options.pageSize = value;
+    table.refresh();
+  });
 
 })(jQuery);

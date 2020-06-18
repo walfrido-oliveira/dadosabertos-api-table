@@ -139,7 +139,23 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
   
           </tbody>
         </table>
-        <nav id="dados-abertos-pager"></nav>
+        <div class="row">
+          <div class="col-md-10">
+            <nav id="dados-abertos-pager"></nav>
+          </div>
+          <div class="col-md-2 form-inline" id="dados-abertos-page-length">
+            <div class="form-group row">
+              <label for="page_length" class="col-sm-8 col-form-label">Tamanho da Página: </label>
+              <div class="col-sm-2">
+                <select class="form-control" name="page_length" id="page_length">
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="30">30</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
