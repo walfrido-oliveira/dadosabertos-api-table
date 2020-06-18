@@ -209,17 +209,17 @@
       "Valor"
     ],
     "fields": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
+      "data",
+      "categoria",
+      "tipo",
+      "controle",
+      "especificacao",
+      "descricao",
+      "localizacao",
+      "valor"
     ],
     "types": [
-      "s","s","s","s","s","s","s","s"
+      "d","s","s","s","s","s","s","c"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_bens_consolidado",
     "filter": {
@@ -243,8 +243,8 @@
       "data",
       "tipo",
       "",
+      "tombamento",
       "classe",
-      "",
       "bem",
       "descricao",
       "localizacao",
@@ -425,7 +425,7 @@
       "data",
       "",
       "empenho",
-      "",
+      "elemento_despesa",
       "nome_favorecido",
       "documento_favorecido",
       "valor"
@@ -453,7 +453,7 @@
       "data",
       "",
       "liquidacao",
-      "",
+      "elemento_despesa",
       "nome_favorecido",
       "documento_favorecido",
       "valor"
@@ -481,7 +481,7 @@
       "data",
       "",
       "pagamento",
-      "",
+      "elemento_despesa",
       "nome_favorecido",
       "documento_favorecido",
       "valor"
@@ -509,7 +509,7 @@
       "data",
       "",
       "pagamento",
-      "",
+      "elemento_despesa",
       "nome_favorecido",
       "documento_favorecido",
       "valor"
@@ -565,7 +565,7 @@
       "data",
       "",
       "pagamento",
-      "",
+      "elemento_despesa",
       "nome_favorecido",
       "documento_favorecido",
       "valor"
@@ -727,7 +727,7 @@
       "situacao"
     ],
     "types": [
-      "s","s","s","s","s","d","d","s"
+      "i:6","s","s","s","s","d","d","s"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_servidores",
     "filter": {
