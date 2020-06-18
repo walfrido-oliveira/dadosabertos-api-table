@@ -14,7 +14,8 @@
     for (let index = 0; index < colCount; index++) {
       shortColumns.push(true);
     }
-    setTable(10);
+    let value  = $( "#page_length option:selected" ).text();
+    setTable(value);
   })
 
   function setTable(pageSize = 10) {
@@ -25,7 +26,6 @@
       filterText: '',
       pagingDivSelector: "#dados-abertos-pager",
     }); 
-    table.refresh();
   }
 
   $('.dados-abertos-filter-input').on("keyup", function() {
@@ -37,7 +37,6 @@
 
   $('#page_length').on('change', function() {
     let value = $(this).val();
-    //table.option('pageSize', value);
     table.options.pageSize = value;
     table.refresh();
   });
