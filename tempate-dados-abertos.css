@@ -171,6 +171,9 @@ z-index: 999;
 /* end dados aberto menu */
 
 /*table*/
+.datatable-filter-line {
+  display: none;
+}
 #dados-abertos-table th {
   color: #34495e; 
   text-transform: uppercase;

@@ -107,7 +107,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
               <?php foreach ($report[ $reportType ][ 'columns' ] as $value) : ?> 
                 <th>
                   <div class="input-group">
-                    <input class="form-control dados-abertos-filter-input" type="text" name="<?php echo sanitize_title( $value ); ?>">
+                    <input class="form-control dados-abertos-filter-input datatable-filter datatable-input-text" type="text" name="<?php echo sanitize_title( $value ); ?>">
                     <span class="input-group-addon">
                       <i class="fa fa-filter"  aria-hidden='true'></i>
                     </span>

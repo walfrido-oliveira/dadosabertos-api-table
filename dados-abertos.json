@@ -11,7 +11,7 @@
       "Valor"
     ],
     "fields": [
-      "numero",
+      "processo",
       "modalidade",
       "processo",
       "abertura",
