@@ -188,10 +188,10 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
           <?php endif; ?>
         </table>
         <div class="row">
-          <div class="col-md-9">
+          <div class="col-md-8">
             <nav id="dados-abertos-pager"></nav>
           </div>
-          <div class="col-md-2 form-inline" id="dados-abertos-page-length">
+          <div class="col-md-4 form-inline" id="dados-abertos-page-length">
             <div class="form-group row">
               <label for="page_length" class="col-sm-8 col-form-label">Tamanho da Página: </label>
               <div class="col-sm-2">
