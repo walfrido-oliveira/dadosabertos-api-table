@@ -111,24 +111,24 @@ var DataTable = function (table, opts) {
             if (this.options.dataTypes instanceof Array) {
                 switch (this.options.dataTypes[j]) {
                 case 'int':
-                    //dt = parseInt ;
+                    dt = parseInt ;
                     break ;
                 case 'float':
                 case 'double':
-                    //dt = parseFloat ;
+                    dt = parseFloat ;
                     break ;
                 case 'date':
                 case 'datetime':
-                    //dt = function (x) { return new Date(x) ; } ;
+                    dt = function (x) { return new Date(x) ; } ;
                     break ;
                 case false:
                 case true:
                 case 'string':
                 case 'str':
-                    //dt = function (x) { return x ; } ;
+                    dt = function (x) { return x ; } ;
                     break ;
                 default:
-                    //dt = this.options.dataTypes[j] ;
+                    dt = this.options.dataTypes[j] ;
                 }
             }
             for (var i = 0; i < rows.length; ++i) {

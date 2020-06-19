@@ -1,5 +1,6 @@
 (function( $ ){
   var shortColumns = [];
+  var filterColumns = [];
   var table = null;
 
   $(document).ready(function() {
@@ -12,7 +13,16 @@
       }
     });
     for (let index = 0; index < colCount; index++) {
-      shortColumns.push(true);
+      shortColumns.push(function(l, r) {
+        if(l.includes('R$ ')) {
+          l = l.replace('R$ ','').replace(/\./g, '').replace(',','.');
+          r = r.replace('R$ ','').replace(/\./g, '').replace(',','.');
+          l = parseFloat(l);
+          r = parseFloat(r);
+        }
+        return l < r ? -1 : (l > r ? 1 : 0);
+      });
+      filterColumns.push(true);
     }
     let value  = $( "#page_length option:selected" ).text();
     let tableLength = $('#dados-abertos-table tbody tr').length;
@@ -29,7 +39,7 @@
     table = new DataTable(document.querySelector('#dados-abertos-table'), {
       pageSize: pageSize,
       sort: shortColumns,
-      filters: shortColumns,
+      filters: filterColumns,
       filterText: '',
       pagingDivSelector: "#dados-abertos-pager",
       firstPage: false,
