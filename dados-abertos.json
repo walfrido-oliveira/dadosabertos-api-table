@@ -20,6 +20,14 @@
       "situacao",
       "valor_homologado"
     ],
+    "footer": [
+      {
+        "index": 7,
+        "prefix": "Total Geral",
+        "posfix": "",
+        "type": "SUM_COLUMN"
+      }
+    ],
     "types": [
       "s","s","s","d","s","s","s","c"
     ],
