@@ -287,7 +287,7 @@
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_bens_consolidado",
     "filter": {
-      "year": false,
+      "year": true,
       "month": false
     }
   },
