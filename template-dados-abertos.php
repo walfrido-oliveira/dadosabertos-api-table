@@ -167,21 +167,23 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
           <?php if( $report[ $reportType ][ 'footer' ] ) : ?>
             <tfoot>
               <tr>
-                <?php foreach ( $report[ $reportType ][ 'columns' ] as $key => $value ) : ?> 
-                  <td><strong>
-                    <?php foreach( $report[ $reportType ][ 'footer' ] as $value2 ) :
-                      if ( $value2['index'] == $key ) :
-                        switch ( $value2['type'] ) :
-                          case 'COUNT_ROW':
-                            echo sprintf( '%s %d %s',  $value2[ 'prefix' ], count( $result ), $value2[ 'posfix' ] );
-                            break;
-                          case 'SUM_COLUMN':
-                            $sum = array_sum( array_column( $result, $report[ $reportType ][ 'fields' ][ $key ] ) );
-                            echo sprintf( '%s R$ %s %s',  $value2[ 'prefix' ], number_format( $sum, 2, ',', '.' ), $value2[ 'posfix' ] );
-                        endswitch;
-                      endif;
-                    endforeach; ?>
-                  </strong></td>
+                <?php foreach ( $report[ $reportType ][ 'columns' ] as $key => $value ) : 
+                  $outPut = '';
+                  foreach( $report[ $reportType ][ 'footer' ] as $value2 ) :
+                    if ( $value2['index'] == $key ) : ?>
+                      <?php switch ( $value2['type'] ) :
+                        case 'COUNT_ROW':
+                          $outPut = sprintf( '%s </br> %d %s',  $value2[ 'prefix' ], count( $result ), $value2[ 'posfix' ] );
+                          break;
+                        case 'SUM_COLUMN':
+                          $sum = array_sum( array_column( $result, $report[ $reportType ][ 'fields' ][ $key ] ) );
+                          $outPut = sprintf( '%s </br> R$ %s %s',  $value2[ 'prefix' ], number_format( $sum, 2, ',', '.' ), $value2[ 'posfix' ] );
+                      endswitch; ?>
+                    <?php endif;
+                  endforeach; ?>
+                  <td class="<?php echo $outPut !== '' ? 'text-nowrap' : ''; ?>" >
+                   <?php echo $outPut; ?>
+                  </td>
                 <?php endforeach; ?>
               </tr>
             </tfoot>
