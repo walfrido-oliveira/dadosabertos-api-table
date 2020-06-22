@@ -477,7 +477,7 @@
       },
       {
         "index": 9,
-        "prefix": "Total Previsto",
+        "prefix": "Total Realizado",
         "posfix": "",
         "type": "SUM_COLUMN"
       }
