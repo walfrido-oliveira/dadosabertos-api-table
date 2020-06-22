@@ -748,40 +748,42 @@
   "tranferencias-cedidas": {
     "columns": [
       "Data",
+      "Convênio",
       "Beneficiário",
       "Documento",
       "Objeto",
       "Vigência Inicial",
-      "Vigêencia Final",
+      "Vigência Final",
       "Valor a Ceder",
       "Valor Contrapartida"
     ],
     "fields": [
       "data",
+      "tipo_convenio",
       "nome_convenio",
       "documento_participante",
       "",
-      "",
+      "data",
       "",
       "valor",
       ""
     ],
     "footer": [
       {
-        "index": 6,
+        "index": 7,
         "prefix": "Total Ceder",
         "posfix": "",
         "type": "SUM_COLUMN"
       },
       {
-        "index": 7,
+        "index": 8,
         "prefix": "Total Contrapartida",
         "posfix": "",
         "type": "SUM_COLUMN"
       }
     ],
     "types": [
-      "d","s","s","s","s","s","c","c"
+      "d","s","s","s","s","d","d","c","c"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_convenios_firmados",
     "filter": {
@@ -792,40 +794,42 @@
   "transferencias-recebidas": {
     "columns": [
       "Data",
+      "Convênio",
       "Beneficiário",
       "Documento",
       "Objeto",
       "Vigência Inicial",
-      "Vigêencia Final",
+      "Vigência Final",
       "Valor a Ceder",
       "Valor Contrapartida"
     ],
     "fields": [
       "data",
+      "tipo_convenio",
       "nome_convenio",
       "documento_participante",
       "",
-      "",
+      "data",
       "",
       "valor",
       ""
     ],
     "footer": [
       {
-        "index": 6,
-        "prefix": "Total Celebrado",
+        "index": 7,
+        "prefix": "Total Ceder",
         "posfix": "",
         "type": "SUM_COLUMN"
       },
       {
-        "index": 7,
+        "index": 8,
         "prefix": "Total Contrapartida",
         "posfix": "",
         "type": "SUM_COLUMN"
       }
     ],
     "types": [
-      "d","s","s","s","s","s","c","c"
+      "d","s","s","s","s","d","d","c","c"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_convenios_firmados",
     "filter": {
