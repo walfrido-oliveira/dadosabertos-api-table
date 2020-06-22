@@ -182,7 +182,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
                     <?php endif;
                   endforeach; ?>
                   <td class="<?php echo $outPut !== '' ? 'text-nowrap' : ''; ?>" >
-                   <?php echo $outPut; ?>
+                   <strong><?php echo $outPut; ?></strong>
                   </td>
                 <?php endforeach; ?>
               </tr>
