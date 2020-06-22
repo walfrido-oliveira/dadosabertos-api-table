@@ -470,8 +470,14 @@
     ],
     "footer": [
       {
+        "index": 8,
+        "prefix": "Total Previsto",
+        "posfix": "",
+        "type": "SUM_COLUMN"
+      },
+      {
         "index": 9,
-        "prefix": "Total Geral",
+        "prefix": "Total Previsto",
         "posfix": "",
         "type": "SUM_COLUMN"
       }
@@ -751,18 +757,19 @@
       "Valor Contrapartida"
     ],
     "fields": [
+      "data",
+      "nome_convenio",
+      "documento_participante",
       "",
       "",
       "",
-      "",
-      "",
-      "",
+      "valor",
       ""
     ],
     "footer": [
       {
         "index": 6,
-        "prefix": "Total Celebrado",
+        "prefix": "Total Ceder",
         "posfix": "",
         "type": "SUM_COLUMN"
       },
@@ -774,12 +781,12 @@
       }
     ],
     "types": [
-      "s","s","s","s","s","s","s"
+      "d","s","s","s","s","s","c","c"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_convenios_firmados",
     "filter": {
-      "year": false,
-      "month": false
+      "year": true,
+      "month": true
     }
   },
   "transferencias-recebidas": {
@@ -794,12 +801,13 @@
       "Valor Contrapartida"
     ],
     "fields": [
+      "data",
+      "nome_convenio",
+      "documento_participante",
       "",
       "",
       "",
-      "",
-      "",
-      "",
+      "valor",
       ""
     ],
     "footer": [
@@ -817,12 +825,12 @@
       }
     ],
     "types": [
-      "s","s","s","s","s","s","s"
+      "d","s","s","s","s","s","c","c"
     ],
     "url": "http://saofelixdeminas-mg.portaltp.com.br/api/transparencia.asmx/json_convenios_firmados",
     "filter": {
-      "year": false,
-      "month": false
+      "year": true,
+      "month": true
     }
   },
   "transferencias-extraorcamentarias": {
